@@ -5,11 +5,11 @@ I'm going to try to use this git repository to learn about taking a python progr
 
 * Adding files
 * Creating branches
-  ** adding functions
+  * adding functions
 * Merging changes back into the master path.
 * Milestone versions?
 * Projects
-  ** Create cards
-  ** Project automation?
+  * Create cards
+  * Project automation?
 * Issues
-  ** Create and track issues
+  * Create and track issues
