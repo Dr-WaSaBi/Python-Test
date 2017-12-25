@@ -1,3 +1,9 @@
+'''
+So Im trying to figure out how to use git and python.
+12/25/17
+Author: Russ Riker
+
+'''
 from random import randint
 
 board = []
