@@ -1,6 +1,6 @@
 '''
 So Im trying to figure out how to use git and python.
-12/25/17
+Date: 12/25/17
 Author: Russ Riker
 
 '''
@@ -12,6 +12,8 @@ for x in range(0, 5):
   board.append(["O"] * 5)
 
 def print_board(board):
+    ''' print_board funtion '''
+    
   for row in board:
     print " ".join(row)
 
