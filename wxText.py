@@ -35,12 +35,6 @@ class HelloFrame(wx.Frame):
         #my buttons
         btn1 = buttons.GenButton(pnl,-1,"Press Me",pos=(100,75))
 
-    def buttonHasBeenPressed(event):
-        # So this code should be run when I press the button
-        # ok = wx.MessageBox("You Pressed my 34234234234 button",1)
-        print("Ok, does this work")
-        
-        
 
 
     def makeMenuBar(self):
@@ -61,6 +55,15 @@ class HelloFrame(wx.Frame):
         # label
         exitItem = fileMenu.Append(wx.ID_EXIT)
 
+        # the wtf menu
+        wtfMenu = wx.Menu()
+        whatItem = wtfMenu.Append(-1, "&What","Is is the What the part of WTF")
+        theItem = wtfMenu.Append(-1,"&The","Is the THE part of WTF")
+        fukItem = wtfMenu.Append(-1,"&Fuk","Is the FUK park of WTF")
+
+        # the run menu
+        runMenu = wx.Menu()
+
         # Now a help menu for the about item
         helpMenu = wx.Menu()
         aboutItem = helpMenu.Append(wx.ID_ABOUT)
@@ -71,6 +74,8 @@ class HelloFrame(wx.Frame):
         # triggered from the keyboard.
         menuBar = wx.MenuBar()
         menuBar.Append(fileMenu, "&File")
+        menuBar.Append(wtfMenu, "&WTF")
+        menuBar.Append(runMenu, "&Run")
         menuBar.Append(helpMenu, "&Help")
 
         # Give the menu bar to the frame
@@ -102,7 +107,7 @@ class HelloFrame(wx.Frame):
         
 def buttonHasBeenPressed(event):
      # So this code should be run when I press the button
-     wx.MessageBox("You Pressed my button", wx.OK|wx.ICON_INFORMATION)
+     wx.MessageBox("You Pressed my button")
 
 if __name__ == '__main__':
     # When this module is run (not imported) then create the app, the
