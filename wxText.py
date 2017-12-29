@@ -35,8 +35,10 @@ class HelloFrame(wx.Frame):
         #my buttons
         btn1 = buttons.GenButton(pnl,-1,"Press Me",pos=(100,75))
 
-    def buttonHasBeenPressed(self):
-        wx.MessageBox("You Pressed my button")
+    def buttonHasBeenPressed(event):
+        # So this code should be run when I press the button
+        ok = wx.MessageBox("You Pressed my button", wx.OK)
+        
         
 
 
@@ -96,7 +98,9 @@ class HelloFrame(wx.Frame):
         wx.MessageBox("This is a wxPython Hello World sample that I entered in.",
                       "About Hello World 2.",
                       wx.OK|wx.ICON_INFORMATION)
-
+def buttonHasBeenPressed(event):
+     # So this code should be run when I press the button
+     wx.MessageBox("You Pressed my button", wx.OK|wx.ICON_INFORMATION)
 
 if __name__ == '__main__':
     # When this module is run (not imported) then create the app, the
@@ -104,5 +108,5 @@ if __name__ == '__main__':
     app = wx.App()
     frm = HelloFrame(None, title='Hello World 2')
     frm.Show()
-    btn1.Bind(ex.EVT_BUTTON, buttonHasBeenPressed)
+    app.Bind(wx.EVT_BUTTON, buttonHasBeenPressed)
     app.MainLoop()
