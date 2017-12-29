@@ -35,6 +35,15 @@ class HelloFrame(wx.Frame):
         #my buttons
         btn1 = buttons.GenButton(pnl,-1,"Press Me",pos=(100,75))
 
+        # What other things can I put on the panel
+        # Would like to get a txt box and be able to read txt in?
+        # How do I do that.
+
+        '''
+        it seemed to change the single quotes to 3 double quotes
+        '''
+
+
 
 
     def makeMenuBar(self):
@@ -87,6 +96,8 @@ class HelloFrame(wx.Frame):
         self.Bind(wx.EVT_MENU, self.OnHello, helloItem)
         self.Bind(wx.EVT_MENU, self.OnExit,  exitItem)
         self.Bind(wx.EVT_MENU, self.OnAbout, aboutItem)
+        self.Bind(wx.EVT_MENU, self.OnFuk, fukItem)
+
 
 
     def OnExit(self, event):
@@ -104,6 +115,14 @@ class HelloFrame(wx.Frame):
         wx.MessageBox("This is a wxPython Hello World sample that I entered in.",
                       "About Hello World 2.",
                       wx.OK|wx.ICON_INFORMATION)
+    def OnFuk(self, event):
+    	''' Fuk menu has been selected. '''
+    	# I want to open a inputbox and get some text from the user and update the window
+    	myIpDlg = wx.TextEntryDialog(frm, 'Enter some text plese:','Input Please')
+    	myIpDlg.SetValue("Default")
+    	if myIpDlg.ShowModal() == wx.ID_OK:
+    		print("You entered %s\n" % myIpDlg.GetValue())
+    	myIpDlg.Destroy()
         
 def buttonHasBeenPressed(event):
      # So this code should be run when I press the button
