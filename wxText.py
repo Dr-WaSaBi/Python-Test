@@ -4,6 +4,7 @@ Hello World, but with more meat.
 """
 
 import wx
+import wx.lib.buttons as buttons # want to create a  button that does something
 
 class HelloFrame(wx.Frame):
     """
@@ -30,6 +31,13 @@ class HelloFrame(wx.Frame):
         # and a status bar
         self.CreateStatusBar()
         self.SetStatusText("Welcome to wxPython!")
+
+        #my buttons
+        btn1 = buttons.GenButton(pnl,-1,"Press Me",pos=(100,75))
+
+    def buttonHasBeenPressed(self):
+        wx.MessageBox("You Pressed my button")
+        
 
 
     def makeMenuBar(self):
@@ -96,4 +104,5 @@ if __name__ == '__main__':
     app = wx.App()
     frm = HelloFrame(None, title='Hello World 2')
     frm.Show()
+    btn1.Bind(ex.EVT_BUTTON, buttonHasBeenPressed)
     app.MainLoop()
