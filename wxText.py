@@ -37,7 +37,8 @@ class HelloFrame(wx.Frame):
 
     def buttonHasBeenPressed(event):
         # So this code should be run when I press the button
-        ok = wx.MessageBox("You Pressed my button", wx.OK)
+        # ok = wx.MessageBox("You Pressed my 34234234234 button",1)
+        print("Ok, does this work")
         
         
 
@@ -98,6 +99,7 @@ class HelloFrame(wx.Frame):
         wx.MessageBox("This is a wxPython Hello World sample that I entered in.",
                       "About Hello World 2.",
                       wx.OK|wx.ICON_INFORMATION)
+        
 def buttonHasBeenPressed(event):
      # So this code should be run when I press the button
      wx.MessageBox("You Pressed my button", wx.OK|wx.ICON_INFORMATION)
@@ -108,5 +110,5 @@ if __name__ == '__main__':
     app = wx.App()
     frm = HelloFrame(None, title='Hello World 2')
     frm.Show()
-    app.Bind(wx.EVT_BUTTON, buttonHasBeenPressed)
+    frm.Bind(wx.EVT_BUTTON, buttonHasBeenPressed)
     app.MainLoop()
