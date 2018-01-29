@@ -1,7 +1,7 @@
 # Python-Test
 
 
-I'm going to try to use this git repository to learn about taking a python program through differnt stages of development.
+I'm going to try to use this git repository to learn about taking a python program through different stages of development.
 
 * Adding files
 * Creating branches
