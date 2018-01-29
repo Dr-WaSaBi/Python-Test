@@ -1,7 +1,7 @@
 #!/usr/bin/python
 
 # Open a file
-fo = open("readfile.py", "r+")
+fo = open("readfile.md", "r+")
 str = fo.read(10);
 print ("Read String is : ", str)
 
