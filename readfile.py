@@ -1,5 +1,4 @@
 #!/usr/bin/python
-#import my-modules;
 '''Doc-string
 this does something, but I really don't know what.
 Well I kind of do now.  But need to play around more
